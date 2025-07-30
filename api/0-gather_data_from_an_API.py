@@ -23,7 +23,7 @@ if __name__ == "__main__":
 
     user_name = user_response.json().get("name")
 
-    # Fetch TODO list
+    # Fetches TODO list
     todos_response = requests.get(todos_url)
     if todos_response.status_code != 200:
         sys.exit("Error: Could not fetch TODO list")
