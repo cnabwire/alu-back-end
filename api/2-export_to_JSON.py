@@ -6,9 +6,8 @@ import json
 import requests
 import sys
 
-
+# Main function #
 def main():
-    """main function"""
     user_id = int(sys.argv[1])
     todo_url = 'https://jsonplaceholder.typicode.com/todos'
     user_url = 'https://jsonplaceholder.typicode.com/users/{}'.format(user_id)
