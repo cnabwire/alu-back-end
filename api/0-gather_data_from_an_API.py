@@ -14,7 +14,10 @@ if __name__ == "__main__":
         sys.exit("Error: User ID must be an integer")
 
     user_url = "https://jsonplaceholder.typicode.com/users/{}".format(user_id)
-    todos_url = "https://jsonplaceholder.typicode.com/todos?userId={}".format(user_id)
+    todos_url = (
+       "https://jsonplaceholder.typicode.com/todos?userId={}"
+       .format(user_id)
+    )
 
     # Fetch user details
     user_response = requests.get(user_url)
@@ -33,7 +36,7 @@ if __name__ == "__main__":
     total_tasks = len(todos)
 
     # Print output in required format
-    print("Employee {} is done with tasks({}/{}):".format(user_name, len(completed_tasks), total_tasks))
+    print(f"Employee {user_name} is done with tasks"
+          f"({len(completed_tasks)}/{total_tasks}):")
     for task in completed_tasks:
         print("\t {}".format(task))
-

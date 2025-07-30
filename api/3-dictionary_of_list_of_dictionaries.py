@@ -5,9 +5,10 @@ and then export the result to csv file. """
 import json
 import requests
 
+# Main function
+
 
 def main():
-    """main function"""
     todo_url = 'https://jsonplaceholder.typicode.com/todos'
 
     response = requests.get(todo_url)

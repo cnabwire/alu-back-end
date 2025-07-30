@@ -7,6 +7,8 @@ import requests
 import sys
 
 # Main function #
+
+
 def main():
     user_id = int(sys.argv[1])
     todo_url = 'https://jsonplaceholder.typicode.com/todos'
@@ -29,7 +31,6 @@ def main():
     file_name = "{}.json".format(user_id)
     with open(file_name, 'w') as file:
         json.dump(output, file)
-
 
 if __name__ == '__main__':
     main()

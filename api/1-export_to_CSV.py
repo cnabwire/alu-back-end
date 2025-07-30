@@ -16,6 +16,8 @@ def fetch_user_data(user_id):
     return response.json()
 
 # Fetches TODO list data from the API#
+
+
 def fetch_todo_data(user_id):
     todo_url = (
         "https://jsonplaceholder.typicode.com/todos?userId={}".format(user_id)
@@ -58,4 +60,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
