@@ -15,9 +15,8 @@ def fetch_user_data(user_id):
         sys.exit(1)
     return response.json()
 
-
+# Fetches TODO list data from the API#
 def fetch_todo_data(user_id):
-    """Fetches TODO list data from the API."""
     todo_url = (
         "https://jsonplaceholder.typicode.com/todos?userId={}".format(user_id)
     )
